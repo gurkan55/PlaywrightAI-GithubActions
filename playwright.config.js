@@ -23,13 +23,13 @@ module.exports = defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    headless: false,
+    headless: true,
   },
   /* Configure project: Chrome only (headed) */
   projects: [
     {
       name: 'chrome',
-      use: { ...devices['Desktop Chrome'], channel: 'chrome', headless: false },
+      use: { ...devices['Desktop Chrome'], channel: 'chrome', headless: true },
     },
   ],
   /* Run your local dev server before starting the tests */
