@@ -26,12 +26,14 @@ module.exports = defineConfig({
     headless: true,
   },
   /* Configure project: Chrome only (headed) */
-  projects: [
-    {
-      name: 'chrome',
-      use: { ...devices['Desktop Chrome'], channel: 'chrome', headless: true },
+ projects: [
+  {
+    name: 'chromium',
+    use: {
+      browserName: 'chromium', // ✅ NOT chrome
     },
-  ],
+  },
+],
   /* Run your local dev server before starting the tests */
   //  webServer: {
   //    command: 'npm run start',
